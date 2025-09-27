@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repara – Heritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-gold: #C89E39;
+            --color-sepia: #EFE8D8;
+            --color-terra: #A56F4A;
+            --color-contemporary: #4A6D5A;
+            --color-dark: #333;
+            --color-light: #fff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--color-dark);
+            background-color: var(--color-light);
+        }
+
+        .header {
+            height: 60vh;
+            background: url(portada.jpg) no-repeat center center/contain;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--color-light);
+            background-color: var(--color-sepia);
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .site-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .site-slogan {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 10px 0 30px;
+            color: var(--color-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-gold);
+            color: var(--color-dark);
+            font-weight: 700;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #d4a946;
+        }
+
+        .intro-section {
+            padding: 80px 20px;
+            background-color: var(--color-sepia);
+            text-align: center;
+        }
+
+        .intro-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-section {
+            padding: 80px 20px;
+            background-color: var(--color-light);
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-terra);
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            background-color: var(--color-sepia);
+            text-align: center;
+        }
+
+        .services-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+          .services-container {
+            flex-direction: column;
+          }
+        }
+
+
+        .services-text-container {
+            flex: 1 1 400px;
+            padding: 20px;
+        }
+
+        .services-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-terra);
+        }
+
+        .services-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-container li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+        
+        .services-image-left,
+        .services-image-right {
+            width: 20%;
+            height: auto;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        .services-image-left {
+            margin-right: 20px;
+        }
+        
+        .services-image-right {
+            margin-left: 20px;
+        }
+
+        .why-invest-section {
+            padding: 80px 20px;
+            background-color: var(--color-light);
+            text-align: center;
+        }
+
+        .why-invest-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-invest-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-terra);
+        }
+
+        .why-invest-container ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .why-invest-container li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--color-dark);
+            text-align: left;
+            max-width: 250px;
+        }
+
+        .why-invest-container .highlight {
+            font-weight: 700;
+            color: var(--color-gold);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .projects-section {
+            padding: 80px 20px;
+            background-color: var(--color-sepia);
+            text-align: center;
+        }
+
+        .projects-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .projects-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-terra);
+        }
+        
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+
+        .contact-section {
+            padding: 80px 20px;
+            background-color: var(--color-light);
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-terra);
+        }
+
+        .contact-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: var(--color-dark);
+        }
+
+        .contact-button {
+            display: inline-block;
+            color: var(--color-dark);
+            font-weight: 700;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0 10px 20px;
+        }
+
+        .contact-button.whatsapp-button {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .contact-button.whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        .contact-button.email-button {
+            background-color: var(--color-gold);
+        }
+
+        .contact-button.email-button:hover {
+            background-color: #d4a946;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--color-terra);
+            color: var(--color-light);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="site-title">Repara – Heritage</h1>
+            <h2 class="site-slogan">Donde la historia se convierte en una inversión rentable.</h2>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <div class="intro-container">
+                <p>
+                    Rehabilitamos patrimonio arquitectónico en Cusco para AirBnB y hotelería boutique.
+                </p>
+                <p>
+                    Nuestra experiencia une la conservación estatal con una visión privada para ofrecerte proyectos rentables y de gran valor.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <h3>Quiénes somos</h3>
+                <p>
+                    Soy Bladimir, un arquitecto con más de **20 años de experiencia** especializado en la rehabilitación del patrimonio arquitectónico. Mi carrera ha sido construida sobre un profundo respeto por la historia y una visión orientada hacia el futuro.
+                </p>
+                <p>
+                    Trabajos previos con el **Ministerio de Cultura** me han dado un conocimiento detallado de las normativas de conservación. Además, mi experiencia se extiende a proyectos particulares, aplicando el mismo rigor y calidad para transformar cualquier inmueble en una inversión exitosa.
+                </p>
+                <p>
+                    Estamos aquí para convertir casonas históricas en AirBnB y hoteles boutique que ofrecen experiencias únicas y un sólido retorno de inversión.
+                </p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="services-container">
+                <img src="img 001.jpg" alt="Servicio 1: Rehabilitación de estructuras" class="services-image-left">
+                <div class="services-text-container">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li>Rehabilitación integral de casonas históricas.</li>
+                        <li>Adecuación patrimonial para AirBnB y hotelería.</li>
+                        <li>Restauración de estructuras patrimoniales.</li>
+                        <li>Asesoría técnica y legal en proyectos patrimoniales.</li>
+                    </ul>
+                </div>
+                <img src="img 002.jpg" alt="Servicio 2: Adaptación de espacios" class="services-image-right">
+            </div>
+        </section>
+
+        <section class="why-invest-section">
+            <div class="why-invest-container">
+                <h3>Por qué invertir en patrimonio en Cusco</h3>
+                <ul>
+                    <li><span class="highlight">Alta rentabilidad:</span> El sector turístico en Cusco garantiza un sólido retorno de inversión.</li>
+                    <li><span class="highlight">Exclusividad:</span> Transformamos inmuebles históricos en propiedades únicas, con alta demanda en el mercado de lujo.</li>
+                    <li><span class="highlight">Crecimiento continuo:</span> La demanda de alojamiento en AirBnB y hoteles boutique en la región sigue en aumento.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-container">
+                <h3>Proyectos y Casos de Éxito</h3>
+                <p>Mi experiencia con el Ministerio de Cultura me ha permitido liderar proyectos de gran envergadura. El rigor y la calidad de estos trabajos son la base para transformar cualquier casona en un inmueble rentable y de alto valor.</p>
+                <div class="project-item">
+                    <img src="img 003.jpg" alt="Casona histórica en Cusco" class="project-image" style="max-width: 75%;">
+                    <h4>Rehabilitación y Adaptación de Casona Histórica</h4>
+                    <p>Aplicamos técnicas de rehabilitación de alta precisión en un inmueble catalogado, asegurando la preservación de su estructura y carácter. **Esta experiencia es directamente aplicable para convertir tu casona en un espacio comercial de lujo o un hospedaje amigable que combine historia y modernidad.**</p>
+                </div>
+                <div class="project-item">
+                    <img src="Fachadas y estructuras.jpg" alt="Restauración de fachada y estructuras" class="project-image" style="max-width: 75%;">
+                    <h4>Restauración de Fachada y Balcones Coloniales</h4>
+                    <p>Lideramos la restauración de una fachada patrimonial en piedra, un trabajo que demuestra nuestra maestría en la conservación de materiales históricos. **El mismo nivel de detalle y rigor lo aplicamos para valorizar los elementos patrimoniales de tu propiedad, haciéndola única y altamente atractiva para el mercado de turismo premium.**</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <h3>Contacto</h3>
+                <p>¿Listo para convertir tu propiedad en una inversión exitosa? Agenda una asesoría gratuita o contáctanos directamente para más información.</p>
+                <a href="https://wa.me/51984505400" class="contact-button whatsapp-button" target="_blank"> Contactar por WhatsApp </a>
+                <a href="mailto:bluizar@gmail.com" class="contact-button email-button"> bluizar@gmail.com </a>
+                <p>Dirección: [Psje. Javier Heraud U1-5, Urb. Ttio; Wanchaq - Cusco]</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Repara – Heritage. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
