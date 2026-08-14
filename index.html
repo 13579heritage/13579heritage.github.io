@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Repara Heritage | Arquitectos en Cusco | Rehabilitación de Patrimonio</title>
-    <meta name="description" content="Especialistas en rehabilitación de patrimonio arquitectónico en Cusco. Convertimos casonas históricas en inversiones rentables para AirBnB y hoteles boutique.">
-    <meta name="keywords" content="arquitectos Cusco, restauración patrimonio Cusco, rehabilitación casonas, inversión inmobiliaria Cusco, AirBnB Cusco, Ministerio de Cultura Cusco">
-    
-    <meta property="og:title" content="Repara Heritage - Arquitectura y Patrimonio en Cusco">
-    <meta property="og:description" content="Convierte tu propiedad histórica en Cusco en una inversión de alta rentabilidad.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://13579heritage.github.io">
-
+    <title>Repara – Heritage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -35,7 +26,7 @@
         }
 
         .header {
-            height: 60vh;
+            height: 75vh;
             background: url(portada.jpg) no-repeat center center/contain;
             position: relative;
             display: flex;
@@ -43,7 +34,7 @@
             align-items: center;
             text-align: center;
             color: var(--color-light);
-            background-color: var(--color-sepia);
+            background-color: #F8F5EE;
         }
 
         .header-overlay {
@@ -58,14 +49,14 @@
         .header-content {
             position: relative;
             z-index: 2;
-            padding: 20px;
+            padding: 70px 20px 40px 20px;
         }
 
         .site-title {
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
             font-weight: 700;
-            margin: 0;
+            margin: 12px 0 30px 0;
             color: var(--color-gold);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
@@ -73,9 +64,32 @@
         .site-slogan {
             font-size: 1.5rem;
             font-weight: 400;
-            margin: 10px 0 30px;
+            margin: 10px 0 18px 0;
             color: var(--color-light);
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+.hero-subtext {
+    font-size: 1.15rem;
+    color: var(--color-light);
+    max-width: 850px;
+    margin: 30px auto 60px auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-gold);
+            color: var(--color-dark);
+            font-weight: 700;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #d4a946;
         }
 
         .intro-section {
@@ -102,11 +116,11 @@
         }
 
         .about-container {
-            max-width: 800px;
+            max-width: 950px;
             margin: 0 auto;
         }
 
-        .about-container h2 { /* Optimizado para SEO */
+        .about-container h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
@@ -135,17 +149,54 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+        
+        @media (max-width: 768px) {
+          .services-container {
+            flex-direction: column;
+          }
+        }
+
 
         .services-text-container {
             flex: 1 1 400px;
-            padding: 20px;
+            padding: 10px 25px;
         }
+.service-item {
+    background-color: #F8F3E7;
+    border: 1px solid #C8B79C;
+    border-top: 4px solid var(--color-gold);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-bottom: 22px;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-        .services-container h2 {
+.service-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+}
+
+.service-item h4 {
+    margin: 0 0 8px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--color-terra);
+}
+
+.service-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark);
+}
+
+        .services-container h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
+letter-spacing: 1px;
             color: var(--color-terra);
         }
 
@@ -169,8 +220,13 @@
             flex-shrink: 0;
         }
         
-        .services-image-left { margin-right: 20px; }
-        .services-image-right { margin-left: 20px; }
+        .services-image-left {
+            margin-right: 20px;
+        }
+        
+        .services-image-right {
+            margin-left: 20px;
+        }
 
         .why-invest-section {
             padding: 80px 20px;
@@ -183,7 +239,7 @@
             margin: 0 auto;
         }
 
-        .why-invest-container h2 {
+        .why-invest-container h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
@@ -226,7 +282,7 @@
             margin: 0 auto;
         }
 
-        .projects-container h2 {
+        .projects-container h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
@@ -239,20 +295,39 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .project-item {
-            margin-bottom: 30px;
+            margin-bottom: 95px;
+            padding: 28px;
+            border-radius: 8px;
         }
 
-        .project-item h3 {
+        .project-item:first-of-type{
+            background:#F3ECDD;
+            border-left:6px solid var(--color-gold);
+        }
+
+        .project-item:last-of-type{
+            background:#EEF2ED;
+            border-left:6px solid var(--color-terra);
+        }
+
+        .project-item h4 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             color: var(--color-gold);
             margin-top: 0;
             margin-bottom: 10px;
         }
+.project-item strong {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: var(--color-gold);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
 
         .contact-section {
             padding: 80px 20px;
@@ -265,7 +340,7 @@
             margin: 0 auto;
         }
 
-        .contact-container h2 {
+        .contact-container h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
@@ -287,19 +362,25 @@
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
-            transition: transform 0.2s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
             margin: 0 10px 20px;
         }
-        
-        .contact-button:hover { transform: scale(1.05); }
 
         .contact-button.whatsapp-button {
             background-color: #25D366;
             color: white;
         }
 
+        .contact-button.whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
         .contact-button.email-button {
             background-color: var(--color-gold);
+        }
+
+        .contact-button.email-button:hover {
+            background-color: #d4a946;
         }
 
         .footer {
@@ -308,99 +389,167 @@
             background-color: var(--color-terra);
             color: var(--color-light);
         }
+       /* =========================
+   AJUSTES RESPONSIVE MÓVIL
+   ========================= */
+@media (max-width: 768px) {
 
-        @media (max-width: 768px) {
-            .services-container { flex-direction: column; }
-            .services-image-left, .services-image-right { width: 80%; margin: 10px 0; }
-            .site-title { font-size: 2.6rem; white-space: normal; }
-            .header { height: 70vh; background-size: cover; }
-        }
+  .header {
+    height: 70vh;
+    background-size: cover; /* clave */
+    background-position: center;
+  }
+
+  .header-overlay {
+    background-color: rgba(0, 0, 0, 0.45); /* mejora contraste */
+  }
+
+  .site-title {
+    font-size: 2.6rem;      /* evita que se parta mal */
+    line-height: 1.1;
+    white-space: nowrap;   /* fuerza una sola línea */
+  }
+
+  .site-slogan {
+    font-size: 1.1rem;
+    margin-top: 12px;
+  }
+
+  .header-content {
+    padding: 15px;
+  }
+}
+ 
     </style>
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18358543787"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18358543787');
+    </script>
 </head>
 <body>
     <header class="header">
         <div class="header-overlay"></div>
         <div class="header-content">
-            <h1 class="site-title">Repara Heritage</h1>
-            <p class="site-slogan">Donde el Patrimonio Edificado se convierte en una inversión rentable en Cusco</p>
+            <h1 class="site-title">Repara – Heritage</h1>
+            <h2 class="site-slogan">
+    Donde el patrimonio edificado se convierte en una inversión rentable.
+</h2>
+<p class="hero-subtext">
+Arquitectura especializada para adecuar, conservar y poner en funcionamiento inmuebles históricos en la región del Cusco.
+</p>
+<a href="https://api.whatsapp.com/send?phone=51984505400&text=Hola,%20deseo%20solicitar%20una%20consulta%20técnica."
+   target="_blank"
+   class="cta-button">
+    Solicite una consulta técnica
+</a>
         </div>
     </header>
 
     <main>
-        <section class="intro-section">
-            <div class="intro-container">
-                <p>Rehabilitamos patrimonio arquitectónico en <strong>Cusco</strong> para AirBnB y hotelería boutique.</p>
-                <p>Nuestra experiencia une la conservación estatal con una visión privada para ofrecerte proyectos rentables y de gran valor.</p>
-            </div>
-        </section>
+<section class="intro-section">
+    <div class="intro-container">
+        <p>
+Cada inmueble histórico de la región del Cusco posee un enorme potencial para un nuevo uso. Ya sea para habilitar un negocio, adecuar ambientes existentes, desarrollar un proyecto turístico o conservar una propiedad familiar, cada intervención requiere una evaluación técnica responsable que permita respetar el valor patrimonial del inmueble y la normativa vigente.
+</p>
+
+<p>
+En Repara – Heritage acompañamos a los propietarios desde la evaluación inicial hasta la habilitación y puesta en funcionamiento de sus inmuebles. Elaboramos diagnósticos técnicos, desarrollamos proyectos arquitectónicos y expedientes, orientamos la obtención de las autorizaciones necesarias y brindamos asesoría en los procedimientos relacionados con el ITSE, para que cada intervención se desarrolle con seguridad técnica, respeto por el patrimonio y cumplimiento de la normativa vigente.
+</p>
+ </div>
+</section>
 
         <section class="about-section">
             <div class="about-container">
-                <h2>Arquitectura y Rehabilitación de Patrimonio</h2>
-                <p>Aquí encontrarás un servicio de arquitectura con más de <strong>20 años de experiencia técnica</strong> en la rehabilitación del patrimonio en Cusco.</p>
-                <p>Trabajos previos con el <strong>Ministerio de Cultura</strong> me han dado un conocimiento detallado de las normativas de conservación.</p>
-                <p>Convertimos casonas históricas en AirBnB y hoteles boutique que ofrecen experiencias únicas y un sólido retorno de inversión.</p>
+                <h3>Quiénes somos</h3>
+                <p>
+Repara – Heritage nace de la experiencia profesional en la conservación, rehabilitación y adecuación de inmuebles históricos de la región del Cusco. Nuestro propósito es ayudar a los propietarios a transformar sus inmuebles en espacios funcionales, seguros y compatibles con nuevos usos, respetando siempre su valor patrimonial.
+</p>
+
+<p>
+Cada inmueble histórico presenta desafíos diferentes. Algunos requieren adecuaciones para un nuevo uso; otros necesitan recuperar su estabilidad o planificar intervenciones compatibles con la normativa vigente. Comprender esas diferencias es la base para proponer soluciones técnicas responsables y viables.
+</p>
+
+<p>
+Nuestra experiencia en proyectos patrimoniales, tanto públicos como privados, nos permite acompañar a los propietarios desde la evaluación inicial hasta el desarrollo del proyecto. Brindamos asesoría técnica especializada para que cada intervención se realice con seguridad, respeto por el patrimonio y una visión de largo plazo.
+</p>
             </div>
         </section>
 
         <section class="services-section">
             <div class="services-container">
-                <img src="img 001.jpg" alt="Rehabilitación de estructuras históricas en Cusco" class="services-image-left">
+                <img src="img 001.jpg" alt="Servicio 1: Rehabilitación de estructuras" class="services-image-left">
                 <div class="services-text-container">
-                    <h2>Nuestros Servicios</h2>
-                    <ul>
-                        <li>Rehabilitación integral de casonas históricas.</li>
-                        <li>Adecuación patrimonial para AirBnB y hotelería.</li>
-                        <li>Restauración de estructuras patrimoniales.</li>
-                        <li><strong>Asesoría técnica y legal:</strong> Saneamiento ante DDC, Plan Maestro del Cusco y licencias de edificación.</li>
-                    </ul>
-                </div>
-                <img src="img 002.jpg" alt="Diseño de interiores en casonas coloniales" class="services-image-right">
-            </div>
-        </section>
+                    <h3>Servicios</h3>
+<p>
+Cada inmueble histórico plantea necesidades diferentes. En Repara – Heritage brindamos soluciones técnicas adaptadas a cada caso, acompañando a los propietarios desde la evaluación inicial hasta la puesta en funcionamiento de sus proyectos.
+</p>
+                    <div class="service-item">
+    <h4>Quiero adecuar mi inmueble para un nuevo uso</h4>
+    <p>Evaluamos el inmueble y desarrollamos propuestas arquitectónicas compatibles con el uso previsto y con la normativa patrimonial.</p>
+</div>
 
-        <section class="why-invest-section">
-            <div class="why-invest-container">
-                <h2>Inversión en el Centro Histórico de Cusco</h2>
-                <ul>
-                    <li><span class="highlight">Alta rentabilidad:</span> El sector turístico en Cusco garantiza un sólido retorno de inversión.</li>
-                    <li><span class="highlight">Exclusividad:</span> Propiedades únicas con alta demanda en el mercado de lujo.</li>
-                    <li><span class="highlight">Crecimiento:</span> Aumento constante de la demanda de alojamiento boutique en la región.</li>
-                </ul>
+<div class="service-item">
+    <h4>Necesito intervenir un inmueble histórico con seguridad</h4>
+    <p>Realizamos diagnósticos técnicos, estudios de conservación y propuestas de rehabilitación que protegen el valor patrimonial del inmueble.</p>
+</div>
+
+<div class="service-item">
+    <h4>Debo cumplir requisitos técnicos y administrativos</h4>
+    <p>Elaboramos expedientes técnicos y brindamos asesoría para los procedimientos relacionados con autorizaciones, licencias e ITSE.</p>
+</div>
+
+<div class="service-item">
+    <h4>¿Le preocupan los trámites y autorizaciones?</h4>
+    <p>Le orientamos sobre los procedimientos que pueden ser necesarios ante el Ministerio de Cultura y las municipalidades, ayudándole a planificar cada intervención con seguridad y conforme a la normativa vigente.</p>
+</div>
+                </div>
+                <img src="img 002.jpg" alt="Servicio 2: Adaptación de espacios" class="services-image-right">
             </div>
         </section>
 
         <section class="projects-section">
             <div class="projects-container">
-                <h2>Proyectos y Casos de Éxito</h2>
+                <h3>Experiencia que inspira confianza</h3>
+<p>
+Cada intervención representa un desafío diferente. Estos proyectos reflejan nuestra forma de abordar el patrimonio arquitectónico: comprender el problema, proponer soluciones responsables y generar beneficios duraderos para los propietarios y para el propio inmueble.
+</p>
+                <p>Mi experiencia con el Ministerio de Cultura me ha permitido liderar proyectos de gran envergadura. El rigor y la calidad de estos trabajos son la base para transformar cualquier casona en un inmueble rentable y de alto valor.</p>
                 <div class="project-item">
-                    <img src="img 003.jpg" alt="Caso de éxito: Casona histórica Cusco" class="project-image" style="max-width: 75%;">
-                    <h3>Rehabilitación y Adaptación de Casona Histórica</h3>
-                    <p>Aplicamos técnicas de rehabilitación de alta precisión asegurando la preservación de la estructura y el carácter histórico.</p>
+                    <img src="img 003.jpg" alt="Casona histórica en Cusco" class="project-image" style="max-width: 75%;">
+                    <h4>Rehabilitación y Adaptación de Casona Histórica</h4>
+                    <p>Aplicamos técnicas de rehabilitación de alta precisión en un inmueble catalogado, asegurando la preservación de su estructura y carácter. **Esta experiencia es directamente aplicable para convertir tu casona en un espacio comercial de lujo o un hospedaje amigable que combine historia y modernidad.**</p>
                 </div>
                 <div class="project-item">
-                    <img src="Fachadas y estructuras.jpg" alt="Restauración de fachadas en Cusco" class="project-image" style="max-width: 75%;">
-                    <h3>Restauración de Fachada y Balcones Coloniales</h3>
-                    <p>Maestría en la conservación de materiales históricos como piedra y adobe para el mercado de turismo premium.</p>
+                    <img src="Fachadas y estructuras.jpg" alt="Restauración de fachada y estructuras" class="project-image" style="max-width: 75%;">
+                    <h4>Restauración de Fachada y Balcones Coloniales</h4>
+                    <p>Lideramos la restauración de una fachada patrimonial en piedra y adobe, un trabajo que demuestra nuestra maestría en la conservación de materiales históricos. **El mismo nivel de detalle y rigor lo aplicamos para valorizar los elementos patrimoniales de tu propiedad, haciéndola única y altamente atractiva para el mercado de turismo premium.**</p>
                 </div>
             </div>
         </section>
 
         <section class="contact-section">
             <div class="contact-container">
-                <h2>Contacto y Asesoría</h2>
-                <p>¿Listo para convertir tu propiedad en una inversión exitosa? Agenda una asesoría gratuita en Cusco.</p>
-                <a href="https://api.whatsapp.com/send?phone=51984505400&text=Hola,%20me%20interesa%20una%20asesoría" target="_blank" class="contact-button whatsapp-button">Contactar por WhatsApp</a>
-                <a href="mailto:bluizarq@gmail.com?subject=Consulta%20Web" class="contact-button email-button">bluizarq@gmail.com</a>
-                <p><strong>Ubicación:</strong> Psje. Javier Heraud U1-5, Urb. Ttio; Wanchaq - Cusco.</p>
+                <h3>Contacto</h3>
+                <p>¿Listo para convertir tu propiedad en una inversión exitosa? Agenda una asesoría gratuita o contáctanos directamente para más información.</p>
+                <a href="https://api.whatsapp.com/send?phone=51984505400&text=Hola,%20me%20interesa%20una%20asesoría" target="_blank" rel="noopener noreferrer" style="background-color: #25D366; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Contactar por WhatsApp</a>
+                <a href="mailto:bluizarq@gmail.com?subject=Consulta%20Web" class="contact-button email-button" target="_blank"> bluizarq@gmail.com </a>
+                <p>Dirección: [Psje. Javier Heraud U1-5, Urb. Ttio; Wanchaq - Cusco]</p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Repara Heritage — Atelier <br> <strong>Arq. Vladimir Luízar</strong> <br> Todos los derechos reservados.</p>
+        <p>&copy; 2025 Repara Heritage — Atelier <br> 
+<strong>Arq. Vladimir Luízar</strong> <br> 
+Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
 
 
