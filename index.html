@@ -430,6 +430,23 @@ letter-spacing: 1px;
 
       gtag('config', 'AW-18358543787');
     </script>
+  <!-- Event snippet for Contacto conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18358543787/_uOuCMj61tgcEKvLhLJE',
+      'value': 1.0,
+      'currency': 'PEN',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>  
 </head>
 <body>
     <header class="header">
